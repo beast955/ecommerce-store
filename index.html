@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fallstring - One Stop for Buying and Selling</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="bg-success text-white py-3 mb-4 rounded">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="logo display-4 fw-bold">Fallstring</div>
+            <nav class="navbar navbar-expand-lg">
+                <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link text-white" href="index.html"><i class="fas fa-home me-2"></i>Home</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="AboutUs.html"><i class="fas fa-info-circle me-2"></i>About Us</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="Buy.html"><i class="fas fa-shopping-bag me-2"></i>Buy</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="cart.html">
+                                <i class="fas fa-shopping-cart me-2"></i>
+                                <span id="cart-count" class="badge bg-danger text-white">0</span>
+                            </a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link text-white" href="Sell.html"><i class="fas fa-store me-2"></i>Sell</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="Contact.html"><i class="fas fa-envelope me-2"></i>Contact Us</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="SignIn.html"><i class="fas fa-sign-in-alt me-2"></i>Sign In</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Carousel Section -->
+    <section class="container mb-5">
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img1.webp" class="d-block w-100 rounded" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="img2.webp" class="d-block w-100  rounded" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="img3.webp" class="d-block w-100 rounded" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-4">Our Features</h2>
+            <div class="row text-center">
+                <div class="col-md-4 feature-box">
+                    <i class="fas fa-leaf fa-3x text-success mb-3"></i>
+                    <h5>Sustainability</h5>
+                    <p>Shop products that are eco-friendly.</p>
+                </div>
+                <div class="col-md-4 feature-box">
+                    <i class="fas fa-truck fa-3x text-success mb-3"></i>
+                    <h5>Fast Delivery</h5>
+                    <p>Quick and reliable shipping services.</p>
+                </div>
+                <div class="col-md-4 feature-box">
+                    <i class="fas fa-dollar-sign fa-3x text-success mb-3"></i>
+                    <h5>Affordable Prices</h5>
+                    <p>Get great deals and discounts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Refurbished Section -->
+    <section class="refurbished">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-4">Refurbished Items</h2>
+            <div class="scrollable-section d-flex flex-wrap justify-content-center">
+                <div class="refurbished-box">
+                    <img src="item1.jpg" class="img-fluid rounded mb-2" alt="...">
+                    <h5>Refurbished Laptop</h5>
+                    <p>$299.99</p>
+                    <button class="btn btn-green" onclick="addToCart({name: 'Laptop', price: 10, image: 'item1.jpg'})">Add to Cart</button>
+                </div>
+                <div class="refurbished-box">
+                    <img src="item2.jpg" class="img-fluid rounded mb-2" alt="...">
+                    <h5>Refurbished Smartphone</h5>
+                    <p>$199.99</p>
+                    <button class="btn btn-green" onclick="addToCart({name: 'Smartphone', price: 10, image: 'item1.jpg'})">Add to Cart</button>
+                </div>
+                <div class="refurbished-box">
+                    <img src="item3.jpg" class="img-fluid rounded mb-2" alt="...">
+                    <h5>Refurbished Chair</h5>
+                    <p>$49.99</p>
+                    <button class="btn btn-green" onclick="addToCart({name: 'Chair', price: 10, image: 'item1.jpg'})">Add to Cart</button>
+                </div>
+                <div class="refurbished-box">
+                    <img src="item4.jpg" class="img-fluid rounded mb-2" alt="...">
+                    <h5>Refurbished Watch</h5>
+                    <p>$99.99</p>
+                    <button class="btn btn-green" onclick="addToCart({name: 'Watch', price: 10, image: 'item1.jpg'})">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-light py-5">
+        <div class="container">
+          <div class="row">
+            <!-- Quick Links -->
+            <div class="col-md-3 mb-4">
+              <h5>Quick Links</h5>
+              <ul class="list-unstyled">
+                <li><a href="index.html" class="text-light">Home</a></li>
+                <li><a href="AboutUs.html" class="text-light">About Us</a></li>
+                <li><a href="Contact.html" class="text-light">Contact</a></li>
+              </ul>
+            </div>
+            <!-- Categories -->
+            <div class="col-md-3 mb-4">
+              <h5>Categories</h5>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-light">Art</a></li>
+                <li><a href="#" class="text-light">DIYS</a></li>
+                <li><a href="#" class="text-light">Watches</a></li>
+                <li><a href="#" class="text-light">Utensils</a></li>
+                <li><a href="#" class="text-light">Clothes</a></li>
+              </ul>
+            </div>
+            
+            <div class="col-md-3 mb-4">
+              <h5>Contact Us</h5>
+              <p>Email: <a href="mailto:support@bidmaster.com" class="text-light">support@Fallstring.com</a></p>
+              <p>Phone: <a href="tel:+1234567890" class="text-light">+1 (234) 567-890</a></p>
+              <p>Address: 123,abc, xyz</p>
+            </div>
+    
+            <div class="col-md-3 mb-4">
+              <h5>Newsletter</h5>
+              <p>Stay updated with the latest deals and offers.</p>
+            
+                <div class="mb-3">
+                  <input  placeholder="Your Email">
+                </div>
+                <button class="btn btn-success">Subscribe</button>
+            </div>
+          </div>
+          <hr class="bg-light">
+          <div class="row">
+            <div class="col-md-6 text-end">
+              <p class="mb-0">© 2025 Fallstring. All Rights Reserved.</p>
+    
+            </div>
+          </div>
+        </div>
+      </footer>
+      <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,178 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400&display=swap');
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+  background-image: url(https://img.freepik.com/premium-vector/shop-pattern-design_260839-154.jpg?semt=ais_hybrid);
+ 
+}
+  
+
+header {
+  background-color: rgb(39, 139, 101);
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 30px;
+  margin: 20px;
+  opacity: 0; 
+  transform: translateY(-50px); 
+  animation: slideDown 0.8s ease forwards; 
+}
+
+.Logo {
+  color: white;
+  font-size: 60px;
+  font-family: 'Playfair Display', serif;
+  font-weight: bolder;
+  margin-right: 20px;
+}
+
+.navbar {
+  border-radius: 15px;
+  opacity: 0; 
+  transform: translateY(-20px); 
+  animation: slideDown 0.8s ease forwards;  
+  animation-delay: 0.3s;
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding: 10px;
+  margin: 0;
+}
+
+.navbar ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.navbar ul li a {
+  color: rgb(39, 139, 101);
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  font-size: larger;
+  padding: 5px 10px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  transform: scale(1.1);
+}
+
+@keyframes slideDown {
+  0% {
+      opacity: 0;
+      transform: translateY(-50px); 
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0); 
+  }
+}
+
+.hero {
+    font-weight: bolder;
+    text-align: center;
+    padding: 50px 20px;
+    margin: 20px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: bolder;
+    color: rgb(39, 139, 101);
+}
+
+.hero button {
+    background-color: rgb(39, 139, 101);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero button:hover {
+    background-color: #0aff76;
+    transform: scale(1.05);
+}
+
+.products {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+
+    flex-wrap: wrap;
+}
+
+.products h2{
+    text-align: center;
+    margin-left: 200px;
+}
+
+.product-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px;
+    margin-left: 100px;
+    text-align: center;
+    width: 200px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: rgb(39, 139, 101);
+}
+
+.product-card button {
+    background-color: rgb(39, 139, 101);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.product-card button:hover {
+    background-color: #0aff76;
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: black;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 50px;
+    margin-top: 20px;
+  }
+  
+  footer p {
+    color: white;
+    margin: 0;
+  }
+  

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Products</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="bg-success text-white py-3 mb-4 rounded">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="logo display-4 fw-bold">Fallstring</div>
+            <nav class="navbar navbar-expand-lg">
+                <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link text-white" href="index.html"><i class="fas fa-home me-2"></i>Home</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="AboutUs.html"><i class="fas fa-info-circle me-2"></i>About Us</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="Buy.html"><i class="fas fa-shopping-bag me-2"></i>Buy</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="cart.html">
+                                <i class="fas fa-shopping-cart me-2"></i>
+                                <span id="cart-count" class="badge bg-danger text-white">0</span>
+                            </a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link text-white" href="Sell.html"><i class="fas fa-store me-2"></i>Sell</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="Contact.html"><i class="fas fa-envelope me-2"></i>Contact Us</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="SignIn.html"><i class="fas fa-sign-in-alt me-2"></i>Sign In</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Buy Section - Display Sell Items -->
+    <section class="container my-5">
+        <h2 class="text-center mb-4">Available Products for Sale</h2>
+        <div class="row g-4" id="buyItems">
+            <!-- Dynamically filled from LocalStorage -->
+        </div>
+    </section>
+
+    <script>
+        // Function to render items in the Buy Section from LocalStorage
+        function renderBuyItems() {
+            const buyItemsContainer = document.getElementById("buyItems");
+            const sellItems = JSON.parse(localStorage.getItem("sellItems")) || [];
+
+            buyItemsContainer.innerHTML = ''; // Clear existing content
+
+            // If there are no items to display
+            if (sellItems.length === 0) {
+                buyItemsContainer.innerHTML = `<p class="text-center text-muted">No items available for sale yet.</p>`;
+                return;
+            }
+
+            // Loop through the sell items and display them
+            sellItems.forEach(item => {
+                const itemDiv = document.createElement("div");
+                itemDiv.classList.add("col-md-4");
+
+                itemDiv.innerHTML = `
+                    <div class="card">
+                        <img src="item-placeholder.jpg" class="card-img-top" alt="${item.name}">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">${item.name}</h5>
+                            <p class="card-text">$${item.price}</p>
+                            <button class="btn btn-success" onclick="addToCart({name: '${item.name}', price: ${item.price}, image: 'item-placeholder.jpg'})">Add to Cart</button>
+                        </div>
+                    </div>
+                `;
+
+                buyItemsContainer.appendChild(itemDiv);
+            });
+        }
+
+        // Call renderBuyItems when the page loads
+        document.addEventListener("DOMContentLoaded", renderBuyItems);
+    </script>
+</body>
+</html>

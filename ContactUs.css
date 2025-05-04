@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400&display=swap');
+
+body {
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
+  url('/background.webp');
+  font-family: 'Poppins', sans-serif;
+ }
+  
+  header {
+    background-color: rgb(39, 139, 101);
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 30px;
+    margin: 20px;
+    opacity: 0; 
+    transform: translateY(-50px); 
+    animation: slideDown 0.8s ease forwards; 
+  }
+  
+  .Logo {
+    color: white;
+    font-size: 60px;
+    font-family: 'Playfair Display', serif;
+    font-weight: bolder;
+    margin-right: 20px;
+  }
+  
+  .navbar {
+    border-radius: 15px;
+    opacity: 0; 
+    transform: translateY(-20px); 
+    animation: slideDown 0.8s ease forwards;  
+    animation-delay: 0.3s;
+  }
+  
+  .navbar ul {
+    list-style-type: none;
+    padding: 10px;
+    margin: 0;
+  }
+  
+  .navbar ul li {
+    display: inline;
+    margin: 0 15px;
+  }
+  
+  .navbar ul li a {
+    color: rgb(39, 139, 101);
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    font-size: larger;
+    padding: 5px 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .navbar ul li a:hover {
+    transform: scale(1.1);
+  }
+  
+  @keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px); 
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+  }
+  main {
+    margin: 40px auto;
+    max-width: 900px;
+    padding: 20px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+h2 {
+    font-family: 'Playfair Display', serif;
+    color: #278b65;
+}
+footer {
+    background-color: black;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 15px;
+}
+footer p, footer a {
+    color: white;
+}
+.form-control:focus {
+    border-color: #278b65;
+    box-shadow: 0 0 5px rgba(39, 139, 101, 0.5);
+}
+.btn-custom {
+    background-color: #278b65;
+    color: white;
+    border: none;
+}
+.btn-custom:hover {
+    background-color: #226c4c;
+}

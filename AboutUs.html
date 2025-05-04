@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+   
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+   
+   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400&display=swap" rel="stylesheet">
+
+   <link rel="stylesheet" href="AboutUs.css" />
+
+   
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="bg-success text-white py-3 mb-4 rounded">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="logo display-4 fw-bold">Fallstring</div>
+            <nav class="navbar navbar-expand-lg">
+                <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link text-white" href="index.html"><i class="fas fa-home me-2"></i>Home</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="AboutUs.html"><i class="fas fa-info-circle me-2"></i>About Us</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="Buy.html"><i class="fas fa-shopping-bag me-2"></i>Buy</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="cart.html">
+                                <i class="fas fa-shopping-cart me-2"></i>
+                                <span id="cart-count" class="badge bg-danger text-white">0</span>
+                            </a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link text-white" href="Sell.html"><i class="fas fa-store me-2"></i>Sell</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="Contact.html"><i class="fas fa-envelope me-2"></i>Contact Us</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="SignIn.html"><i class="fas fa-sign-in-alt me-2"></i>Sign In</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h2>Welcome to Fallstring</h2>
+            <p>At Fallstring, we believe in creating a seamless experience for both buyers and sellers. Our platform connects individuals and businesses, providing a safe space to exchange goods and services.</p>
+        </section>
+
+        <section>
+            <h2>Our Mission</h2>
+            <p>Our mission is to empower our users by providing them with a simple and efficient marketplace. Whether you are looking to buy the latest gadgets or sell your handmade crafts, we’ve got you covered!</p>
+        </section>
+
+        <section>
+            <h2>Why Choose Us?</h2>
+            <ul>
+                <li>🔒 Secure Transactions</li>
+                <li>📦 Easy Listing Process</li>
+                <li>📊 Advanced Search Options</li>
+                <li>🤝 Community Support</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Join Our Community</h2>
+            <p>Become a part of our growing community and enjoy the benefits of a dynamic marketplace. Sign up today and start buying or selling with ease!</p>
+            <button id="joinButton" class="btn btn-success">Join Now</button>
+        </section>
+    </main>
+
+    <footer class="footer bg-dark text-light py-5">
+        <div class="container">
+          <div class="row">
+            <!-- Quick Links -->
+            <div class="col-md-3 mb-4">
+              <h5>Quick Links</h5>
+              <ul class="list-unstyled">
+                <li><a href="index.html" class="text-light">Home</a></li>
+                <li><a href="AboutUs.html" class="text-light">About Us</a></li>
+                <li><a href="Contact.html" class="text-light">Contact</a></li>
+              </ul>
+            </div>
+            <!-- Categories -->
+            <div class="col-md-3 mb-4">
+              <h5>Categories</h5>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-light">Art</a></li>
+                <li><a href="#" class="text-light">DIYS</a></li>
+                <li><a href="#" class="text-light">Watches</a></li>
+                <li><a href="#" class="text-light">Utensils</a></li>
+                <li><a href="#" class="text-light">Clothes</a></li>
+              </ul>
+            </div>
+            
+            <div class="col-md-3 mb-4">
+              <h5>Contact Us</h5>
+              <p>Email: <a href="mailto:support@bidmaster.com" class="text-light">support@Fallstring.com</a></p>
+              <p>Phone: <a href="tel:+1234567890" class="text-light">+1 (234) 567-890</a></p>
+              <p>Address: 123,abc, xyz</p>
+            </div>
+    
+            <div class="col-md-3 mb-4">
+              <h5>Newsletter</h5>
+              <p>Stay updated with the latest deals and offers.</p>
+            
+                <div class="mb-3">
+                  <input  placeholder="Your Email">
+                </div>
+                <button class="btn btn-success">Subscribe</button>
+            </div>
+          </div>
+          <hr class="bg-light">
+          <div class="row">
+            <div class="col-md-6 text-end">
+              <p class="mb-0">© 2025 Fallstring. All Rights Reserved.</p>
+    
+            </div>
+          </div>
+        </div>
+      </footer>
+    <script>
+        document.getElementById('joinButton').addEventListener('click', function() {
+            alert('Thank you for joining our community!');
+        });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,257 @@
+body {
+  background: 
+  linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
+  url("background.webp");
+  font-family: 'Poppins', sans-serif;
+}
+
+header {
+  background-color: rgb(39, 139, 101);
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 30px;
+  margin: 20px;
+  opacity: 0; 
+  transform: translateY(-50px); 
+  animation: slideDown 0.8s ease forwards; 
+}
+
+.Logo {
+  color: white;
+  font-size: 60px;
+  font-family: 'Playfair Display', serif;
+  font-weight: bolder;
+  margin-right: 20px;
+}
+
+.navbar {
+  border-radius: 15px;
+  opacity: 0; 
+  transform: translateY(-20px); 
+  animation: slideDown 0.8s ease forwards;  
+  animation-delay: 0.3s;
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding: 10px;
+  margin: 0;
+}
+
+.navbar ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.navbar ul li a {
+  color: rgb(39, 139, 101);
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  font-size: larger;
+  padding: 5px 10px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  transform: scale(1.1);
+}
+
+@keyframes slideDown {
+  0% {
+      opacity: 0;
+      transform: translateY(-50px); 
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0); 
+  }
+}
+
+section {
+  margin: 0 5px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 50px;
+  font-family: 'Playfair Display', serif;
+  font-weight: bolder;
+}
+
+h2 {
+  font-family: "Poppins", sans-serif;
+}
+
+.quote {
+  font-size: 24px;
+  font-family: 'Poppins', sans-serif;
+  color: rgb(0, 0, 0);
+  margin: 20px auto;
+  animation: fadeIn 3s ease-in-out; 
+  opacity: 0; 
+  animation-fill-mode: forwards; 
+}
+
+.animated {
+  opacity: 0; 
+  animation: fadeIn 3s ease-in-out; 
+  animation-fill-mode: forwards; 
+}
+
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+
+h1.animated {
+  animation-delay: 0.5s;
+}
+
+h2.animated {
+  animation-delay: 1s;
+}
+
+.quote.animated {
+  animation-delay: 1.5s;
+}
+
+.Page.animated {
+  animation-delay: 2s;
+  animation-duration: 1s;
+}
+
+.Page {
+  display: inline-block;
+  border-radius: 6px;
+  background-color: white;
+  margin: 30px 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.4s, box-shadow 0.4s; 
+  cursor: pointer;
+}
+
+.Page:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8); 
+  background-color: rgba(30, 139, 92, 0.1); 
+}
+
+.Page img {
+  width: 400px;
+  border-radius: 10px;
+  height: 300px;
+  transition: transform 0.3s; 
+}
+
+.Page:hover img {
+  transform: scale(1.1); 
+}
+
+.Page button {
+  background-color: rgb(30, 139, 92);
+  border: none; 
+  border-radius: 8px;
+  width: 120px; 
+  height: 45px; 
+  font-size: larger; 
+  font-family: "Poppins", sans-serif; 
+  color: white; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease, transform 0.3s ease; 
+}
+
+.Page button:hover {
+  background-color: rgb(39, 139, 101); 
+  transform: scale(1.05); 
+}
+
+.Page button a {
+  text-decoration: none; 
+  color: white; 
+  display: block; 
+  height: 100%; 
+  line-height: 45px; 
+}
+
+.features, .refurbished {
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.feature-box, .buy-sell-box {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-box:hover, .buy-sell-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.refurbished-box {
+  flex: 1 1 calc(25% - 20px);
+  max-width: calc(25% - 20px);
+  margin: 10px;
+  text-align: center;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+.refurbished-box img {
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.refurbished-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.refurbished-box button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  background: #28a745;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.3s;
+}
+
+.refurbished-box button:hover {
+  background: #218838;
+  transform: scale(1.05);
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+
+.carousel-inner img {
+    height: 500px;
+    object-fit: cover;
+}
+
